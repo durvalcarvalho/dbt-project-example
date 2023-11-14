@@ -1,13 +1,16 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
-with top_museums_to_visit as (
+with museums as (
+	select * from {{ ref('stg_museums') }}
+),
+top_museums_to_visit as (
 	SELECT 
 		m."name",
 		m.country,
 		m.state,
 		m.city
 	FROM museums m
-	join most_valuable_museums mvm
+	join {{ ref ('most_valuable_museums') }} mvm
 	on m.museum_id = mvm.museum_id
 )
 

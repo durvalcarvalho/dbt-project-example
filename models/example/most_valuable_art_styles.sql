@@ -1,6 +1,12 @@
 {{ config(materialized='view') }}
 
-with most_valuable_artists as (
+with product_size as (
+	select * from {{ ref('stg_product_size') }}
+),
+works_museums_artists as (
+	select * from {{ ref('works_museums_artists') }}
+),
+most_valuable_artists as (
 	SELECT 
 		wma.work_style "Art style",
 		sum(sale_price) "sum_of_sales"

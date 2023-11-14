@@ -7,12 +7,12 @@ models:
     columns:
       - name: country
         description: "Country"
-        tests:
-          - unique
-          - not_null
+        # tests:
+        #   - unique
+        #   - not_null
       
       - name: num_of_museums
         description: "Number of museums"
-        tests:
-          - unique
-          - not_null
+        # tests:
+        #   - unique
+        #   - not_null

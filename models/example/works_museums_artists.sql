@@ -1,6 +1,15 @@
 {{ config(materialized='view') }}
 
-with works_museums_artists as (
+with artists as (
+	select * from {{ ref('stg_artists') }}
+),
+works as (
+	select * from {{ ref('stg_works') }}
+),
+museums as (
+	select * from {{ ref('stg_museums') }}
+),
+works_museums_artists as (
     SELECT 
 		w.work_id "work_id",
 	    w."name" "work_name",

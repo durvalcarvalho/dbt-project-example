@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: artworks_ds
+    database: example_project
+    schema: public
+    tables:
+      - name: artists
+      - name: canvas_size
+      - name: image_links
+      - name: museum_hours
+      - name: museums
+      - name: product_size
+      - name: subjects
+      - name: works
