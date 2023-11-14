@@ -1,0 +1,18 @@
+
+version: 2
+
+models:
+  - name: num_of_museums_per_country
+    description: "Number of museums per country"
+    columns:
+      - name: country
+        description: "Country"
+        tests:
+          - unique
+          - not_null
+      
+      - name: num_of_museums
+        description: "Number of museums"
+        tests:
+          - unique
+          - not_null
