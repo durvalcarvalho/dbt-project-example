@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: artworks_ds
-    database: example_project
+    database: "{{ target.dbname }}"
     schema: public
     tables:
       - name: artists

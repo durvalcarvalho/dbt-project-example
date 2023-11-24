@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_artists
+    description: Staging table for artists
+    database: "{{ target.project }}"
+    columns:
+      - name: hashed_middle_names
+        description: Hashed middle names
+        

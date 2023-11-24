@@ -1,6 +1,6 @@
 {{ config(materialized='view') }}
 
-
+-- CTE
 with artists as (
     select * from {{ ref('stg_artists') }}
 ),

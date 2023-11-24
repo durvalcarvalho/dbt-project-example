@@ -1,7 +1,7 @@
 version: 1
 transformation:
     profile_config_file: /home/durval/.dbt/profiles.yml
-    remote: true
+    remote: false
 scheduler:
     composer:
         project_id: ""
@@ -13,6 +13,4 @@ scheduler:
         schedule_interval: '@daily'
         credential_var: DEX_SERVER_API_KEY
 dex:
-    url: http://0.0.0.0:8180
-    project_environment: "17a56574-2d18-4ab2-a067-f6d9b356f64b"
-    api_key: "dxs_UdPZuj.30636531316232372d666430612d343537622d386131342d626437626161343462383362"
+    url: http://0.0.0.0:8080
