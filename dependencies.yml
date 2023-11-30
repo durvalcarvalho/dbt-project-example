@@ -2,6 +2,6 @@ packages:
   - package: dbt-labs/dbt_utils
     version: 1.1.1
   - package: calogica/dbt_expectations
-    version: [">=0.8.0"]
+    version: [">=100.8.0"]
   - package: dbt-labs/codegen
     version: [">=0.9.0"]
