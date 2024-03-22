@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 with product_size as (
 	select * from {{ ref('stg_product_size') }}
