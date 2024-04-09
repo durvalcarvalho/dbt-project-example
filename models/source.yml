@@ -1,0 +1,523 @@
+version: 2
+
+sources:
+  - name: public
+    description: ""
+    database: example_project
+    schema: public
+    tables:
+      - name: artists
+        description: ""
+        columns:
+          - name: artist_id
+            data_type: integer
+            description: ""
+          - name: full_name
+            data_type: character varying
+            description: ""
+          - name: first_name
+            data_type: character varying
+            description: ""
+          - name: middle_names
+            data_type: character varying
+            description: ""
+          - name: last_name
+            data_type: character varying
+            description: ""
+          - name: nationality
+            data_type: character varying
+            description: ""
+          - name: style
+            data_type: character varying
+            description: ""
+          - name: birth
+            data_type: integer
+            description: ""
+          - name: death
+            data_type: integer
+            description: ""
+
+      - name: canvas_size
+        description: ""
+        columns:
+          - name: size_id
+            data_type: integer
+            description: ""
+          - name: width
+            data_type: integer
+            description: ""
+          - name: height
+            data_type: integer
+            description: ""
+          - name: label
+            data_type: character varying
+            description: ""
+
+      - name: image_links
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: url
+            data_type: character varying
+            description: ""
+          - name: thumbnail_small_url
+            data_type: character varying
+            description: ""
+          - name: thumbnail_large_url
+            data_type: character varying
+            description: ""
+
+      - name: most_productive_artists
+        description: ""
+        columns:
+          - name: full_name
+            data_type: character varying
+            description: ""
+          - name: nationality
+            data_type: character varying
+            description: ""
+          - name: painted_area
+            data_type: bigint
+            description: ""
+
+      - name: most_valuable_art_styles
+        description: ""
+        columns:
+          - name: art style
+            data_type: character varying
+            description: ""
+          - name: sum_of_sales
+            data_type: bigint
+            description: ""
+
+      - name: most_valuable_artists
+        description: ""
+        columns:
+          - name: artist_full_name
+            data_type: character varying
+            description: ""
+          - name: sales
+            data_type: bigint
+            description: ""
+
+      - name: most_valuable_museums
+        description: ""
+        columns:
+          - name: museum_id
+            data_type: integer
+            description: ""
+          - name: museum_name
+            data_type: character varying
+            description: ""
+          - name: sales
+            data_type: bigint
+            description: ""
+
+      - name: museum_hours
+        description: ""
+        columns:
+          - name: museum_id
+            data_type: integer
+            description: ""
+          - name: day
+            data_type: character varying
+            description: ""
+          - name: open
+            data_type: character varying
+            description: ""
+          - name: close
+            data_type: character varying
+            description: ""
+
+      - name: museums
+        description: ""
+        columns:
+          - name: museum_id
+            data_type: integer
+            description: ""
+          - name: name
+            data_type: character varying
+            description: ""
+          - name: address
+            data_type: character varying
+            description: ""
+          - name: city
+            data_type: character varying
+            description: ""
+          - name: state
+            data_type: character varying
+            description: ""
+          - name: postal
+            data_type: character varying
+            description: ""
+          - name: country
+            data_type: character varying
+            description: ""
+          - name: phone
+            data_type: character varying
+            description: ""
+          - name: url
+            data_type: character varying
+            description: ""
+
+      - name: num_of_museums_per_country
+        description: ""
+        columns:
+          - name: country
+            data_type: character varying
+            description: ""
+          - name: num_of_museums
+            data_type: bigint
+            description: ""
+
+      - name: num_of_works_per_artist
+        description: ""
+        columns:
+          - name: full_name
+            data_type: character varying
+            description: ""
+          - name: nationality
+            data_type: character varying
+            description: ""
+          - name: style
+            data_type: character varying
+            description: ""
+          - name: number_of_works
+            data_type: bigint
+            description: ""
+
+      - name: pg_stat_statements
+        description: ""
+        columns:
+          - name: userid
+            data_type: oid
+            description: ""
+          - name: dbid
+            data_type: oid
+            description: ""
+          - name: toplevel
+            data_type: boolean
+            description: ""
+          - name: queryid
+            data_type: bigint
+            description: ""
+          - name: query
+            data_type: text
+            description: ""
+          - name: plans
+            data_type: bigint
+            description: ""
+          - name: total_plan_time
+            data_type: double precision
+            description: ""
+          - name: min_plan_time
+            data_type: double precision
+            description: ""
+          - name: max_plan_time
+            data_type: double precision
+            description: ""
+          - name: mean_plan_time
+            data_type: double precision
+            description: ""
+          - name: stddev_plan_time
+            data_type: double precision
+            description: ""
+          - name: calls
+            data_type: bigint
+            description: ""
+          - name: total_exec_time
+            data_type: double precision
+            description: ""
+          - name: min_exec_time
+            data_type: double precision
+            description: ""
+          - name: max_exec_time
+            data_type: double precision
+            description: ""
+          - name: mean_exec_time
+            data_type: double precision
+            description: ""
+          - name: stddev_exec_time
+            data_type: double precision
+            description: ""
+          - name: rows
+            data_type: bigint
+            description: ""
+          - name: shared_blks_hit
+            data_type: bigint
+            description: ""
+          - name: shared_blks_read
+            data_type: bigint
+            description: ""
+          - name: shared_blks_dirtied
+            data_type: bigint
+            description: ""
+          - name: shared_blks_written
+            data_type: bigint
+            description: ""
+          - name: local_blks_hit
+            data_type: bigint
+            description: ""
+          - name: local_blks_read
+            data_type: bigint
+            description: ""
+          - name: local_blks_dirtied
+            data_type: bigint
+            description: ""
+          - name: local_blks_written
+            data_type: bigint
+            description: ""
+          - name: temp_blks_read
+            data_type: bigint
+            description: ""
+          - name: temp_blks_written
+            data_type: bigint
+            description: ""
+          - name: blk_read_time
+            data_type: double precision
+            description: ""
+          - name: blk_write_time
+            data_type: double precision
+            description: ""
+          - name: wal_records
+            data_type: bigint
+            description: ""
+          - name: wal_fpi
+            data_type: bigint
+            description: ""
+          - name: wal_bytes
+            data_type: numeric
+            description: ""
+
+      - name: pg_stat_statements_info
+        description: ""
+        columns:
+          - name: dealloc
+            data_type: bigint
+            description: ""
+          - name: stats_reset
+            data_type: timestamp with time zone
+            description: ""
+
+      - name: product_size
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: size_id
+            data_type: integer
+            description: ""
+          - name: sale_price
+            data_type: integer
+            description: ""
+          - name: regular_price
+            data_type: integer
+            description: ""
+
+      - name: stg_artists
+        description: ""
+        columns:
+          - name: artist_id
+            data_type: integer
+            description: ""
+          - name: full_name
+            data_type: character varying
+            description: ""
+          - name: first_name
+            data_type: character varying
+            description: ""
+          - name: hashed_middle_names
+            data_type: text
+            description: ""
+          - name: last_name
+            data_type: character varying
+            description: ""
+          - name: nationality
+            data_type: character varying
+            description: ""
+          - name: style
+            data_type: character varying
+            description: ""
+          - name: birth
+            data_type: integer
+            description: ""
+          - name: death
+            data_type: integer
+            description: ""
+
+      - name: stg_canvas_size
+        description: ""
+        columns:
+          - name: size_id
+            data_type: integer
+            description: ""
+          - name: width
+            data_type: integer
+            description: ""
+          - name: height
+            data_type: integer
+            description: ""
+          - name: label
+            data_type: character varying
+            description: ""
+
+      - name: stg_museums
+        description: ""
+        columns:
+          - name: museum_id
+            data_type: integer
+            description: ""
+          - name: name
+            data_type: character varying
+            description: ""
+          - name: address
+            data_type: character varying
+            description: ""
+          - name: city
+            data_type: character varying
+            description: ""
+          - name: state
+            data_type: character varying
+            description: ""
+          - name: postal
+            data_type: character varying
+            description: ""
+          - name: country
+            data_type: character varying
+            description: ""
+          - name: phone
+            data_type: character varying
+            description: ""
+          - name: url
+            data_type: character varying
+            description: ""
+
+      - name: stg_product_size
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: size_id
+            data_type: integer
+            description: ""
+          - name: sale_price
+            data_type: integer
+            description: ""
+          - name: regular_price
+            data_type: integer
+            description: ""
+
+      - name: stg_works
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: name
+            data_type: character varying
+            description: ""
+          - name: artist_id
+            data_type: integer
+            description: ""
+          - name: style
+            data_type: character varying
+            description: ""
+          - name: museum_id
+            data_type: integer
+            description: ""
+
+      - name: subjects
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: subject
+            data_type: character varying
+            description: ""
+
+      - name: top_museums_to_visit
+        description: ""
+        columns:
+          - name: name
+            data_type: character varying
+            description: ""
+          - name: country
+            data_type: character varying
+            description: ""
+          - name: state
+            data_type: character varying
+            description: ""
+          - name: city
+            data_type: character varying
+            description: ""
+
+      - name: works
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: name
+            data_type: character varying
+            description: ""
+          - name: artist_id
+            data_type: integer
+            description: ""
+          - name: style
+            data_type: character varying
+            description: ""
+          - name: museum_id
+            data_type: integer
+            description: ""
+
+      - name: works_museums_artists
+        description: ""
+        columns:
+          - name: work_id
+            data_type: integer
+            description: ""
+          - name: work_name
+            data_type: character varying
+            description: ""
+          - name: work_style
+            data_type: character varying
+            description: ""
+          - name: artist_id
+            data_type: integer
+            description: ""
+          - name: artist_full_name
+            data_type: character varying
+            description: ""
+          - name: artist_nationality
+            data_type: character varying
+            description: ""
+          - name: artist_style
+            data_type: character varying
+            description: ""
+          - name: artist_birth_year
+            data_type: integer
+            description: ""
+          - name: artist_death_year
+            data_type: integer
+            description: ""
+          - name: museum_id
+            data_type: integer
+            description: ""
+          - name: museum_name
+            data_type: character varying
+            description: ""
+          - name: museum_city
+            data_type: character varying
+            description: ""
+          - name: museum_state
+            data_type: character varying
+            description: ""
+          - name: museum_country
+            data_type: character varying
+            description: ""
+
